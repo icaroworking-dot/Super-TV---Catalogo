@@ -1,14 +1,17 @@
-<!DOCTYPE html>
-<html lang="pt">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A instalar Addon no Tuvora...</title>
-  <script>
-    // Redireciona automaticamente ao abrir a página
-    window.location.href = "stremio://catalog.nuvio.tv/%7B%22language%22%3A%22pt-BR%22%2C%22region%22%3A%22BR%22%7D/manifest.json";
-  </script>
-  <style>
+  <title>Instalar catálogo no Nuvio</title>  <script>
+    // Novo endereço do add-on de catálogo
+    const addonUrl = "https://top-streaming.stream/69fc140c-2a8c-4507-b4a8-a3b92dd67dd9/manifest.json";
+
+    // Link de instalação para aplicativos compatíveis com o protocolo Stremio
+    const installUrl = "stremio://" + addonUrl.replace(/^https?:\/\//, "");
+
+    // Tenta abrir automaticamente o aplicativo
+    window.location.href = installUrl;
+  </script>  <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       text-align: center;
@@ -16,6 +19,7 @@
       background-color: #0e0e12;
       color: #ffffff;
     }
+
     .card {
       max-width: 420px;
       margin: 0 auto;
@@ -25,15 +29,18 @@
       border: 1px solid #2b2b3d;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
     }
+
     h2 {
       margin-top: 0;
       font-size: 22px;
     }
+
     p {
       color: #a0a0b2;
       font-size: 15px;
       line-height: 1.5;
     }
+
     .btn {
       display: inline-block;
       margin-top: 20px;
@@ -45,9 +52,11 @@
       font-weight: bold;
       font-size: 16px;
     }
+
     .btn:hover {
       background-color: #5b4cc4;
     }
+
     .btn-secondary {
       display: inline-block;
       margin-top: 12px;
@@ -58,24 +67,29 @@
       border: none;
       cursor: pointer;
     }
-  </style>
-</head>
-<body>
+  </style></head><body>
   <div class="card">
-    <h2>A instalar Addon...</h2>
-    <p>O Tuvora deverá abrir automaticamente em breves instantes com a tela de confirmação.</p>
-    
-    <!-- Botão principal usando o protocolo stremio:// -->
-    <a class="btn" href="stremio://catalog.nuvio.tv/%7B%22language%22%3A%22pt-BR%22%2C%22region%22%3A%22BR%22%7D/manifest.json">
-      Instalar no Tuvora
-    </a>
-    
-    <br>
-    
-    <!-- Opção alternativa caso o app utilize o protocolo tuvor:// -->
-    <a class="btn-secondary" href="tuvora://catalog.nuvio.tv/%7B%22language%22%3A%22pt-BR%22%2C%22region%22%3A%22BR%22%7D/manifest.json">
-      Não abriu? Tente esta ligação alternativa
-    </a>
+    <h2>Instalando catálogo...</h2><p>
+  O Nuvio deverá abrir automaticamente em breves instantes
+  para você confirmar a instalação do novo catálogo.
+</p>
+
+<a
+  class="btn"
+  href="stremio://top-streaming.stream/69fc140c-2a8c-4507-b4a8-a3b92dd67dd9/manifest.json"
+>
+  Instalar no Nuvio
+</a>
+
+<br>
+
+<a
+  class="btn-secondary"
+  href="https://top-streaming.stream/69fc140c-2a8c-4507-b4a8-a3b92dd67dd9/manifest.json"
+>
+  Não abriu? Acessar o add-on diretamente
+</a>
+
   </div>
 </body>
 </html>
